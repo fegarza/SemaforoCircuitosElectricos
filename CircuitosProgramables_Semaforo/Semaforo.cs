@@ -88,7 +88,7 @@ namespace CircuitosProgramables_Semaforo
                 }
                 else if (Conteo == 46)
                 {
-                    this.EstablecerImagen(Properties.Resources.apagados);
+                    this.EstablecerImagen(Properties.Resources.rojo);
                 }
 
             }
@@ -104,7 +104,10 @@ namespace CircuitosProgramables_Semaforo
                 }
             }
         }
-
+        public void ModoEspera()
+        {
+            this.EstablecerImagen(Properties.Resources.rojo);
+        }
 
         public void EventoDeMedioSegundo(bool Entero)
         {

@@ -22,10 +22,7 @@ namespace CircuitosProgramables_Semaforo
 
         private Label LblContador;
 
-        /// <summary>
-        /// Saber si en el conteo se encuentra como un numero entero en segundos
-        /// </summary>
-        private bool Entero = false;
+ 
         private bool Preventivas = false;
 
         private Modo ModoContador = Modo.VERTICALES;
@@ -58,88 +55,106 @@ namespace CircuitosProgramables_Semaforo
 
         public void EventoDeMedioSegundo(object source, EventArgs e)
         {
-            if (!Preventivas) { 
-            //Variar el valor para cada 2 medio segundos
-            Entero = !Entero;
+            bool Entero = (Conteo % 2) == 0;
+            if (!Preventivas)
+            {
+                 
+               
 
-            if (Entero)
-            {
-                ConteoSemaforo++;
-            }
-            
-
-            if (this.ModoContador == Modo.VERTICALES)
-            {
-                this.SemaforoNorte.EventoDeMedioSegundo(Conteo);
-                this.SemaforoSur.EventoDeMedioSegundo(Conteo);
-            }
-            else
-            {
-                this.SemaforoEste.EventoDeMedioSegundo(Conteo);
-                this.SemaforoOeste.EventoDeMedioSegundo(Conteo);
-            }
-
-            //Verde prendido
-            if (Conteo < 29)
-            {
                 if (Entero)
                 {
-                    this.AsignarConteo(ConteoSemaforo.ToString(), Color.LawnGreen);
+                    ConteoSemaforo++;
                 }
-             }
-            else if(Conteo == 29)
-            {
-                this.AsignarConteo("0", Color.Gray);
-            }
-            //Verde parpadeando
-            else if (Conteo < 35)
-            {
-                if (Entero)
+
+
+                if (this.ModoContador == Modo.VERTICALES)
                 {
-                    this.AsignarConteo((ConteoSemaforo - 15).ToString(), Color.LawnGreen);
+                    this.SemaforoNorte.EventoDeMedioSegundo(Conteo);
+                    this.SemaforoSur.EventoDeMedioSegundo(Conteo);
+
+                    this.SemaforoEste.ModoEspera();
+                    this.SemaforoOeste.ModoEspera();
                 }
                 else
                 {
-                   
-                        this.AsignarConteo("0", Color.Gray);
-                   
+                    this.SemaforoEste.EventoDeMedioSegundo(Conteo);
+                    this.SemaforoOeste.EventoDeMedioSegundo(Conteo);
+
+                    this.SemaforoNorte.ModoEspera();
+                    this.SemaforoSur.ModoEspera();
                 }
-             
-            }
-            else if (Conteo == 35)
-            {
-                this.AsignarConteo("0", Color.Gray);
-            }
-            //Amarillo encendido 
-            else if (Conteo < 41)
-            {
-                if (Entero)
+
+                //Verde prendido
+                if (Conteo < 29)
                 {
-                    this.AsignarConteo((ConteoSemaforo - 18).ToString(), Color.Yellow);
+                    if (Entero)
+                    {
+                        this.AsignarConteo(ConteoSemaforo.ToString(), Color.LawnGreen);
+                    }
+                }
+                else if (Conteo == 29)
+                {
+                    this.LblContador.ForeColor = Color.Gray;
+
+                    //this.AsignarConteo("0", Color.Gray);
+                }
+                //Verde parpadeando
+                else if (Conteo < 35)
+                {
+                    if (Entero)
+                    {
+                        this.AsignarConteo((ConteoSemaforo - 15).ToString(), Color.LawnGreen);
+                    }
+                    else
+                    {
+                        this.LblContador.ForeColor = Color.Gray;
+                        // this.AsignarConteo("0", Color.Gray);
+
+                    }
 
                 }
-            }
-            else if (Conteo == 41)
-            {
-                this.AsignarConteo("0", Color.Gray);
-            }
-            //Semaforo en rojo
-            else if (Conteo < 45)
-            {
-                if (Entero)
+                else if (Conteo == 35)
                 {
-                    this.AsignarConteo((ConteoSemaforo - 21).ToString(), Color.Red);
+                    this.LblContador.ForeColor = Color.Gray;
+                    // this.AsignarConteo("0", Color.Gray);
                 }
-            }
-            else if (Conteo == 46)
-            {
-                this.AsignarConteo("0", Color.Gray);
-                this.Switcheo();
-                return;
-            }
-             
+                //Amarillo encendido 
+                else if (Conteo < 41)
+                {
+                    if (Entero)
+                    {
+                        this.AsignarConteo((ConteoSemaforo - 18).ToString(), Color.Yellow);
 
-            Conteo++;
+                    }
+                }
+                else if (Conteo == 41)
+                {
+                    this.LblContador.ForeColor = Color.Gray;
+
+                    //this.AsignarConteo("0", Color.Gray);
+                }
+                //Semaforo en rojo
+                else if (Conteo < 45)
+                {
+                    if (Entero)
+                    {
+                        this.AsignarConteo((ConteoSemaforo - 21).ToString(), Color.Red);
+                    }
+                }
+                else if (Conteo == 45)
+                {
+                    this.LblContador.ForeColor = Color.Gray;
+
+                    //this.AsignarConteo("0", Color.Gray);
+                    
+                }else if(Conteo == 46)
+                {
+                    this.Switcheo();
+                    return;
+                }
+
+
+                Conteo++;
             }
             else
             {
@@ -189,28 +204,33 @@ namespace CircuitosProgramables_Semaforo
             Contador.Stop();
         }
 
-        public void Reiniciar()
-        {
-            this.Contador.Stop();
-            this.Conteo = 0;
-            this.ConteoSemaforo = 0;
-            Entero = false;
-            this.LblContador.Text = "0";
-            this.LblContador.ForeColor = Color.Gray;
-            this.Iniciar();
-        }
+       
 
         public void Switcheo()
         {
-            if(this.ModoContador  == Modo.VERTICALES)
+
+            this.Contador.Stop();
+            this.Conteo = 1;
+            this.ConteoSemaforo = 1;
+             
+            this.LblContador.Text = "1";
+            this.LblContador.ForeColor = Color.LawnGreen;
+
+            if (this.ModoContador == Modo.VERTICALES)
             {
                 this.ModoContador = Modo.HORIZONTALES;
+                SemaforoEste.EventoDeMedioSegundo(2);
+                SemaforoOeste.EventoDeMedioSegundo(2);
             }
             else
             {
                 this.ModoContador = Modo.VERTICALES;
+                SemaforoNorte.EventoDeMedioSegundo(2);
+                SemaforoSur.EventoDeMedioSegundo(2);
             }
-            this.Reiniciar();
+            this.Contador.Start();
+          
+           
         }
 
         public void Default()
@@ -220,10 +240,10 @@ namespace CircuitosProgramables_Semaforo
             this.SemaforoOeste.EventoDeMedioSegundo(false);
             this.SemaforoSur.EventoDeMedioSegundo(false);
             this.SemaforoNorte.EventoDeMedioSegundo(false);
-            this.ModoContador = Modo.HORIZONTALES;
+            this.ModoContador = Modo.VERTICALES;
             this.Conteo = 0;
             this.ConteoSemaforo = 0;
-            Entero = false;
+            
             this.LblContador.Text = "0";
             this.LblContador.ForeColor = Color.Gray;
         }
@@ -234,7 +254,7 @@ namespace CircuitosProgramables_Semaforo
             this.Contador.Stop();
             this.Conteo = 0;
             this.ConteoSemaforo = 0;
-            Entero = false;
+          
             this.LblContador.Text = "0";
             this.LblContador.ForeColor = Color.Gray;
             Contador.Start();

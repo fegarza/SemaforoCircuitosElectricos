@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pcxd = new System.Windows.Forms.PictureBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -43,19 +44,20 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.button2 = new System.Windows.Forms.Button();
             this.picBxSemaforoOeste = new System.Windows.Forms.PictureBox();
-            this.btnDetener = new System.Windows.Forms.Button();
             this.picBxSemaforoSur = new System.Windows.Forms.PictureBox();
-            this.btnIniciar = new System.Windows.Forms.Button();
             this.picBxSemaforoEste = new System.Windows.Forms.PictureBox();
             this.picBxSemaforo = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblContador = new System.Windows.Forms.Label();
             this.pcFondo = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnDetener = new System.Windows.Forms.Button();
+            this.btnIniciar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pcxd = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcxd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxSemaforoOeste)).BeginInit();
@@ -65,7 +67,6 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcFondo)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcxd)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -86,6 +87,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1484, 861);
             this.panel2.TabIndex = 2;
+            // 
+            // pcxd
+            // 
+            this.pcxd.Image = ((System.Drawing.Image)(resources.GetObject("pcxd.Image")));
+            this.pcxd.Location = new System.Drawing.Point(11, 105);
+            this.pcxd.Name = "pcxd";
+            this.pcxd.Size = new System.Drawing.Size(1, 1);
+            this.pcxd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcxd.TabIndex = 12;
+            this.pcxd.TabStop = false;
             // 
             // bindingNavigator1
             // 
@@ -202,61 +213,31 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(121, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "PREVENTIVAS";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // picBxSemaforoOeste
             // 
             this.picBxSemaforoOeste.BackColor = System.Drawing.Color.Transparent;
             this.picBxSemaforoOeste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picBxSemaforoOeste.Location = new System.Drawing.Point(437, 273);
+            this.picBxSemaforoOeste.Location = new System.Drawing.Point(434, 301);
             this.picBxSemaforoOeste.Name = "picBxSemaforoOeste";
             this.picBxSemaforoOeste.Size = new System.Drawing.Size(140, 65);
             this.picBxSemaforoOeste.TabIndex = 7;
             this.picBxSemaforoOeste.TabStop = false;
             // 
-            // btnDetener
-            // 
-            this.btnDetener.Location = new System.Drawing.Point(476, 12);
-            this.btnDetener.Name = "btnDetener";
-            this.btnDetener.Size = new System.Drawing.Size(139, 23);
-            this.btnDetener.TabIndex = 8;
-            this.btnDetener.Text = "DETENER";
-            this.btnDetener.UseVisualStyleBackColor = true;
-            this.btnDetener.Click += new System.EventHandler(this.btnDetener_Click);
-            // 
             // picBxSemaforoSur
             // 
             this.picBxSemaforoSur.BackColor = System.Drawing.Color.Transparent;
             this.picBxSemaforoSur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBxSemaforoSur.Location = new System.Drawing.Point(527, 632);
+            this.picBxSemaforoSur.Location = new System.Drawing.Point(561, 634);
             this.picBxSemaforoSur.Name = "picBxSemaforoSur";
             this.picBxSemaforoSur.Size = new System.Drawing.Size(65, 140);
             this.picBxSemaforoSur.TabIndex = 10;
             this.picBxSemaforoSur.TabStop = false;
             // 
-            // btnIniciar
-            // 
-            this.btnIniciar.Location = new System.Drawing.Point(293, 30);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(139, 23);
-            this.btnIniciar.TabIndex = 7;
-            this.btnIniciar.Text = "INICIAR";
-            this.btnIniciar.UseVisualStyleBackColor = true;
-            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
-            // 
             // picBxSemaforoEste
             // 
             this.picBxSemaforoEste.BackColor = System.Drawing.Color.Transparent;
             this.picBxSemaforoEste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBxSemaforoEste.Location = new System.Drawing.Point(911, 613);
+            this.picBxSemaforoEste.Location = new System.Drawing.Point(910, 580);
             this.picBxSemaforoEste.Name = "picBxSemaforoEste";
             this.picBxSemaforoEste.Size = new System.Drawing.Size(140, 65);
             this.picBxSemaforoEste.TabIndex = 9;
@@ -266,7 +247,7 @@
             // 
             this.picBxSemaforo.BackColor = System.Drawing.Color.Transparent;
             this.picBxSemaforo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBxSemaforo.Location = new System.Drawing.Point(886, 186);
+            this.picBxSemaforo.Location = new System.Drawing.Point(852, 187);
             this.picBxSemaforo.Name = "picBxSemaforo";
             this.picBxSemaforo.Size = new System.Drawing.Size(65, 130);
             this.picBxSemaforo.TabIndex = 7;
@@ -308,8 +289,39 @@
             this.pcFondo.TabStop = false;
             this.pcFondo.Click += new System.EventHandler(this.pcFondo_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(121, 30);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(139, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "PREVENTIVAS";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnDetener
+            // 
+            this.btnDetener.Location = new System.Drawing.Point(466, 30);
+            this.btnDetener.Name = "btnDetener";
+            this.btnDetener.Size = new System.Drawing.Size(139, 23);
+            this.btnDetener.TabIndex = 8;
+            this.btnDetener.Text = "DETENER";
+            this.btnDetener.UseVisualStyleBackColor = true;
+            this.btnDetener.Click += new System.EventHandler(this.btnDetener_Click);
+            // 
+            // btnIniciar
+            // 
+            this.btnIniciar.Location = new System.Drawing.Point(293, 30);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(139, 23);
+            this.btnIniciar.TabIndex = 7;
+            this.btnIniciar.Text = "INICIAR";
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnIniciar);
             this.panel1.Controls.Add(this.btnDetener);
@@ -319,15 +331,15 @@
             this.panel1.Size = new System.Drawing.Size(1484, 100);
             this.panel1.TabIndex = 3;
             // 
-            // pcxd
+            // button1
             // 
-            this.pcxd.Image = ((System.Drawing.Image)(resources.GetObject("pcxd.Image")));
-            this.pcxd.Location = new System.Drawing.Point(11, 105);
-            this.pcxd.Name = "pcxd";
-            this.pcxd.Size = new System.Drawing.Size(1, 1);
-            this.pcxd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcxd.TabIndex = 12;
-            this.pcxd.TabStop = false;
+            this.button1.Location = new System.Drawing.Point(875, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(139, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "TICK";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -343,6 +355,7 @@
             this.Text = "Form1";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcxd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
@@ -354,7 +367,6 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcFondo)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcxd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -385,6 +397,7 @@
         private System.Windows.Forms.PictureBox pcFondo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pcxd;
+        private System.Windows.Forms.Button button1;
     }
 }
 
