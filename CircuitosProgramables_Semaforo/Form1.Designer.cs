@@ -51,11 +51,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblContador = new System.Windows.Forms.Label();
             this.pcFondo = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnDetener = new System.Windows.Forms.Button();
-            this.btnIniciar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnpreventivas = new ePOSOne.btnProduct.Button_WOC();
+            this.btntick = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
+            this.btndetenre = new ePOSOne.btnProduct.Button_WOC();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcxd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -74,6 +74,7 @@
             this.panel2.BackgroundImage = global::CircuitosProgramables_Semaforo.Properties.Resources.fondoAnimado;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.pcxd);
             this.panel2.Controls.Add(this.bindingNavigator1);
             this.panel2.Controls.Add(this.picBxSemaforoOeste);
@@ -85,7 +86,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1484, 861);
+            this.panel2.Size = new System.Drawing.Size(1370, 749);
             this.panel2.TabIndex = 2;
             // 
             // pcxd
@@ -139,8 +140,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
             // bindingNavigatorDeleteItem
@@ -258,9 +259,9 @@
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel5.Controls.Add(this.lblContador);
-            this.panel5.Location = new System.Drawing.Point(673, 420);
+            this.panel5.Location = new System.Drawing.Point(632, 359);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(141, 114);
+            this.panel5.Size = new System.Drawing.Size(119, 114);
             this.panel5.TabIndex = 6;
             // 
             // lblContador
@@ -268,7 +269,7 @@
             this.lblContador.AutoSize = true;
             this.lblContador.Font = new System.Drawing.Font("Digital-7", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContador.ForeColor = System.Drawing.Color.Gray;
-            this.lblContador.Location = new System.Drawing.Point(30, 10);
+            this.lblContador.Location = new System.Drawing.Point(18, 8);
             this.lblContador.Name = "lblContador";
             this.lblContador.Size = new System.Drawing.Size(85, 96);
             this.lblContador.TabIndex = 4;
@@ -283,76 +284,128 @@
             this.pcFondo.Location = new System.Drawing.Point(0, 0);
             this.pcFondo.Margin = new System.Windows.Forms.Padding(0);
             this.pcFondo.Name = "pcFondo";
-            this.pcFondo.Size = new System.Drawing.Size(1482, 859);
+            this.pcFondo.Size = new System.Drawing.Size(1368, 747);
             this.pcFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcFondo.TabIndex = 3;
             this.pcFondo.TabStop = false;
             this.pcFondo.Click += new System.EventHandler(this.pcFondo_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(121, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "PREVENTIVAS";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnDetener
-            // 
-            this.btnDetener.Location = new System.Drawing.Point(466, 30);
-            this.btnDetener.Name = "btnDetener";
-            this.btnDetener.Size = new System.Drawing.Size(139, 23);
-            this.btnDetener.TabIndex = 8;
-            this.btnDetener.Text = "DETENER";
-            this.btnDetener.UseVisualStyleBackColor = true;
-            this.btnDetener.Click += new System.EventHandler(this.btnDetener_Click);
-            // 
-            // btnIniciar
-            // 
-            this.btnIniciar.Location = new System.Drawing.Point(293, 30);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(139, 23);
-            this.btnIniciar.TabIndex = 7;
-            this.btnIniciar.Text = "INICIAR";
-            this.btnIniciar.UseVisualStyleBackColor = true;
-            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.btnIniciar);
-            this.panel1.Controls.Add(this.btnDetener);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.panel1.Controls.Add(this.btnpreventivas);
+            this.panel1.Controls.Add(this.btntick);
+            this.panel1.Controls.Add(this.button_WOC2);
+            this.panel1.Controls.Add(this.btndetenre);
+            this.panel1.Location = new System.Drawing.Point(330, 11);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1484, 100);
-            this.panel1.TabIndex = 3;
+            this.panel1.Size = new System.Drawing.Size(705, 77);
+            this.panel1.TabIndex = 17;
             // 
-            // button1
+            // btnpreventivas
             // 
-            this.button1.Location = new System.Drawing.Point(875, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "TICK";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnpreventivas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnpreventivas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(165)))));
+            this.btnpreventivas.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(194)))), ((int)(((byte)(181)))));
+            this.btnpreventivas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnpreventivas.FlatAppearance.BorderSize = 0;
+            this.btnpreventivas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnpreventivas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnpreventivas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnpreventivas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpreventivas.Location = new System.Drawing.Point(15, 12);
+            this.btnpreventivas.Name = "btnpreventivas";
+            this.btnpreventivas.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(165)))));
+            this.btnpreventivas.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(165)))));
+            this.btnpreventivas.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnpreventivas.Size = new System.Drawing.Size(143, 53);
+            this.btnpreventivas.TabIndex = 13;
+            this.btnpreventivas.Text = "PREVENTIVAS";
+            this.btnpreventivas.TextColor = System.Drawing.Color.White;
+            this.btnpreventivas.UseVisualStyleBackColor = false;
+            this.btnpreventivas.Click += new System.EventHandler(this.btnpreventivas_Click);
+            // 
+            // btntick
+            // 
+            this.btntick.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btntick.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(165)))));
+            this.btntick.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(194)))), ((int)(((byte)(181)))));
+            this.btntick.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btntick.FlatAppearance.BorderSize = 0;
+            this.btntick.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btntick.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btntick.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntick.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntick.Location = new System.Drawing.Point(550, 12);
+            this.btntick.Name = "btntick";
+            this.btntick.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(165)))));
+            this.btntick.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(165)))));
+            this.btntick.OnHoverTextColor = System.Drawing.Color.White;
+            this.btntick.Size = new System.Drawing.Size(143, 53);
+            this.btntick.TabIndex = 16;
+            this.btntick.Text = "TICK";
+            this.btntick.TextColor = System.Drawing.Color.White;
+            this.btntick.UseVisualStyleBackColor = false;
+            this.btntick.Click += new System.EventHandler(this.btntick_Click);
+            // 
+            // button_WOC2
+            // 
+            this.button_WOC2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.button_WOC2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(165)))));
+            this.button_WOC2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(194)))), ((int)(((byte)(181)))));
+            this.button_WOC2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.button_WOC2.FlatAppearance.BorderSize = 0;
+            this.button_WOC2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.button_WOC2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.button_WOC2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WOC2.Location = new System.Drawing.Point(196, 12);
+            this.button_WOC2.Name = "button_WOC2";
+            this.button_WOC2.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(165)))));
+            this.button_WOC2.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(165)))));
+            this.button_WOC2.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC2.Size = new System.Drawing.Size(143, 53);
+            this.button_WOC2.TabIndex = 14;
+            this.button_WOC2.Text = "INICIAR";
+            this.button_WOC2.TextColor = System.Drawing.Color.White;
+            this.button_WOC2.UseVisualStyleBackColor = false;
+            this.button_WOC2.Click += new System.EventHandler(this.button_WOC2_Click);
+            // 
+            // btndetenre
+            // 
+            this.btndetenre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btndetenre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(165)))));
+            this.btndetenre.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(194)))), ((int)(((byte)(181)))));
+            this.btndetenre.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btndetenre.FlatAppearance.BorderSize = 0;
+            this.btndetenre.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btndetenre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btndetenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndetenre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndetenre.Location = new System.Drawing.Point(375, 12);
+            this.btndetenre.Name = "btndetenre";
+            this.btndetenre.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(165)))));
+            this.btndetenre.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(165)))));
+            this.btndetenre.OnHoverTextColor = System.Drawing.Color.White;
+            this.btndetenre.Size = new System.Drawing.Size(143, 53);
+            this.btndetenre.TabIndex = 15;
+            this.btndetenre.Text = "DETENER";
+            this.btndetenre.TextColor = System.Drawing.Color.White;
+            this.btndetenre.UseVisualStyleBackColor = false;
+            this.btndetenre.Click += new System.EventHandler(this.btndetenre_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1484, 861);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1500, 900);
-            this.MinimumSize = new System.Drawing.Size(1500, 900);
+            this.MinimumSize = new System.Drawing.Size(1364, 736);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Semaforo";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcxd)).EndInit();
@@ -379,9 +432,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox picBxSemaforoSur;
         private System.Windows.Forms.PictureBox picBxSemaforoOeste;
-        private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Button btnDetener;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -395,9 +445,12 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.PictureBox pcFondo;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pcxd;
-        private System.Windows.Forms.Button button1;
+        private ePOSOne.btnProduct.Button_WOC btnpreventivas;
+        private ePOSOne.btnProduct.Button_WOC btntick;
+        private ePOSOne.btnProduct.Button_WOC btndetenre;
+        private ePOSOne.btnProduct.Button_WOC button_WOC2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

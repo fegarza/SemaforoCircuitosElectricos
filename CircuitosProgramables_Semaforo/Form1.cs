@@ -71,5 +71,25 @@ namespace CircuitosProgramables_Semaforo
         {
             miControlador.EventoDeMedioSegundo(null, null);
         }
+
+        private void button_WOC2_Click(object sender, EventArgs e)
+        {
+            miControlador.Iniciar();
+        }
+
+        private void btnpreventivas_Click(object sender, EventArgs e)
+        {
+            miControlador.IniciarPreventivas();
+        }
+
+        private void btndetenre_Click(object sender, EventArgs e)
+        {
+            miControlador.Detener();
+        }
+
+        private void btntick_Click(object sender, EventArgs e)
+        {
+            miControlador.EventoDeMedioSegundo(null, null);
+        }
     }
 }
