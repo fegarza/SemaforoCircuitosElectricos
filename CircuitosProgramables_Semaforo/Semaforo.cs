@@ -4,8 +4,11 @@ using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
+using AnimSharp.Animate;
+using Nito.AsyncEx;
+using Nito.AsyncEx.Synchronous;
 
 namespace CircuitosProgramables_Semaforo
 {
@@ -13,6 +16,7 @@ namespace CircuitosProgramables_Semaforo
     {
         //Punteros a los componentes del form
         private PictureBox Imagen;
+ 
 
         private bool Preventivas = false;
 
@@ -20,13 +24,18 @@ namespace CircuitosProgramables_Semaforo
       
         public Semaforo(PictureBox _imagen,  Cardinalidad _cardinalidad )
         {
+          
             this.CardinalidadSemaforo = _cardinalidad;
             this.Imagen = _imagen;
             this.EstablecerImagen(Properties.Resources.apagados);
             this.Imagen.SizeMode = PictureBoxSizeMode.Zoom;
         }
- 
- 
+
+
+
+     
+
+
         public void EstablecerImagen(Bitmap _img)
         {
             switch (CardinalidadSemaforo)
@@ -53,7 +62,10 @@ namespace CircuitosProgramables_Semaforo
             if (!Preventivas)
             {
                 if (Conteo < 29)
-                { 
+                {
+                    
+                   
+                       
                     this.EstablecerImagen(Properties.Resources.verde);
                 }
                 //Verde parpadeando

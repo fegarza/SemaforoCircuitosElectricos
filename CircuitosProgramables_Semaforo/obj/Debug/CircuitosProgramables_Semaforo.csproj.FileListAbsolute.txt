@@ -22,3 +22,24 @@ C:\Users\arvafik\Documents\GitHub\SemaforoCircuitosElectricos\CircuitosProgramab
 C:\Users\arvafik\Documents\GitHub\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.exe
 C:\Users\arvafik\Documents\GitHub\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.pdb
 C:\Users\arvafik\Documents\GitHub\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.csprojAssemblyReference.cache
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\CircuitosProgramables_Semaforo.exe.config
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\CircuitosProgramables_Semaforo.exe
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\CircuitosProgramables_Semaforo.pdb
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.csprojAssemblyReference.cache
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.Form1.resources
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.Properties.Resources.resources
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.csproj.GenerateResource.cache
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.csproj.CoreCompileInputs.cache
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.csproj.CopyComplete
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.exe
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.pdb
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\AnimSharp.dll
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\Nito.AsyncEx.Context.dll
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\Nito.AsyncEx.Tasks.dll
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\Nito.Disposables.dll
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\System.Collections.Immutable.dll
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\Nito.AsyncEx.Context.xml
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\Nito.AsyncEx.Tasks.xml
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\Nito.Disposables.xml
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\System.Collections.Immutable.xml

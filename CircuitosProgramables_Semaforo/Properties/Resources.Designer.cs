@@ -113,6 +113,16 @@ namespace CircuitosProgramables_Semaforo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap muchiDerecha {
+            get {
+                object obj = ResourceManager.GetObject("muchiDerecha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rojo {
             get {
                 object obj = ResourceManager.GetObject("rojo", resourceCulture);

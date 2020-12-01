@@ -18,17 +18,22 @@ namespace CircuitosProgramables_Semaforo
         {
 
             InitializeComponent();
-            miControlador = new Controlador(lblContador, new Semaforo(picBxSemaforo, Cardinalidad.NORTE), new Semaforo(picBxSemaforoSur, Cardinalidad.SUR), new Semaforo(picBxSemaforoEste, Cardinalidad.ESTE), new Semaforo(picBxSemaforoOeste, Cardinalidad.OESTE));
+            miControlador = new Controlador(lblContador, new Semaforo(picBxSemaforo,    Cardinalidad.NORTE), new Semaforo(picBxSemaforoSur,  Cardinalidad.SUR), new Semaforo(picBxSemaforoEste,   Cardinalidad.ESTE), new Semaforo(picBxSemaforoOeste,  Cardinalidad.OESTE));
+           
+            pcFondo.Controls.Add(picBxSemaforo);
+            pcFondo.Controls.Add(picBxSemaforoEste);
+            pcFondo.Controls.Add(picBxSemaforoOeste);
+            pcFondo.Controls.Add(picBxSemaforoSur);
+      
+            /*
 
-             /*
-
-                        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-                        wplayer.PlayStateChange += Player_PlayStateChange;
-                        wplayer.URL = Environment.CurrentDirectory + @"\s.mp3";
-                        wplayer.controls.play();
-                        pcxd.Width = 800;
-                        pcxd.Height = 800;
-            */
+                       WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+                       wplayer.PlayStateChange += Player_PlayStateChange;
+                       wplayer.URL = Environment.CurrentDirectory + @"\s.mp3";
+                       wplayer.controls.play();
+                       pcxd.Width = 800;
+                       pcxd.Height = 800;
+           */
 
         }
 
@@ -90,6 +95,8 @@ namespace CircuitosProgramables_Semaforo
         private void btntick_Click(object sender, EventArgs e)
         {
             miControlador.EventoDeMedioSegundo(null, null);
+
+            
         }
     }
 }
