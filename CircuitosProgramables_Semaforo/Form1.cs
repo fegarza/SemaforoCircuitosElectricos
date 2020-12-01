@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormAnimation;
 
 namespace CircuitosProgramables_Semaforo
 {
@@ -18,13 +19,18 @@ namespace CircuitosProgramables_Semaforo
         {
 
             InitializeComponent();
-            miControlador = new Controlador(lblContador, new Semaforo(picBxSemaforo,    Cardinalidad.NORTE), new Semaforo(picBxSemaforoSur,  Cardinalidad.SUR), new Semaforo(picBxSemaforoEste,   Cardinalidad.ESTE), new Semaforo(picBxSemaforoOeste,  Cardinalidad.OESTE));
+            miControlador = new Controlador(lblContador, new Semaforo(picBxSemaforo,    Cardinalidad.NORTE, muchiArriba), new Semaforo(picBxSemaforoSur,  Cardinalidad.SUR), new Semaforo(picBxSemaforoEste,   Cardinalidad.ESTE, null, pcCarroX), new Semaforo(picBxSemaforoOeste,  Cardinalidad.OESTE));
            
             pcFondo.Controls.Add(picBxSemaforo);
             pcFondo.Controls.Add(picBxSemaforoEste);
             pcFondo.Controls.Add(picBxSemaforoOeste);
             pcFondo.Controls.Add(picBxSemaforoSur);
-      
+ 
+            pcFondo.Controls.Add(muchiArriba);
+            pcFondo.Controls.Add(pcCarroX);
+           
+
+
             /*
 
                        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
@@ -95,8 +101,10 @@ namespace CircuitosProgramables_Semaforo
         private void btntick_Click(object sender, EventArgs e)
         {
             miControlador.EventoDeMedioSegundo(null, null);
-
-            
         }
+
+    
+
+
     }
 }

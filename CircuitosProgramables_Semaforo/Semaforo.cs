@@ -7,8 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using AnimSharp.Animate;
-using Nito.AsyncEx;
-using Nito.AsyncEx.Synchronous;
+using WinFormAnimation;
 
 namespace CircuitosProgramables_Semaforo
 {
@@ -16,14 +15,34 @@ namespace CircuitosProgramables_Semaforo
     {
         //Punteros a los componentes del form
         private PictureBox Imagen;
- 
+        private PictureBox Muchi;
+        private PictureBox Carro;
 
         private bool Preventivas = false;
 
         Cardinalidad CardinalidadSemaforo;
       
-        public Semaforo(PictureBox _imagen,  Cardinalidad _cardinalidad )
+        public Semaforo(PictureBox _imagen,  Cardinalidad _cardinalidad, PictureBox _muchi, PictureBox _carro )
         {
+            this.Carro = _carro;
+            this.Muchi = _muchi;
+            this.CardinalidadSemaforo = _cardinalidad;
+            this.Imagen = _imagen;
+            this.EstablecerImagen(Properties.Resources.apagados);
+            this.Imagen.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+        public Semaforo(PictureBox _imagen, Cardinalidad _cardinalidad, PictureBox _muchi )
+        {
+           
+            this.Muchi = _muchi;
+            this.CardinalidadSemaforo = _cardinalidad;
+            this.Imagen = _imagen;
+            this.EstablecerImagen(Properties.Resources.apagados);
+            this.Imagen.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+        public Semaforo(PictureBox _imagen, Cardinalidad _cardinalidad )
+        {
+
           
             this.CardinalidadSemaforo = _cardinalidad;
             this.Imagen = _imagen;
@@ -33,7 +52,46 @@ namespace CircuitosProgramables_Semaforo
 
 
 
-     
+        public void AnimarMuchi()
+        {
+            if(Muchi != null )
+            {
+                if (this.CardinalidadSemaforo == Cardinalidad.NORTE)
+                {
+
+                    new Animator2D(new Path2D(new Float2D(Muchi.Location.X, 700), Muchi.Location.ToFloat2D(), 20000)).Play(Muchi, Animator2D.KnownProperties.Location);
+                 
+                }
+                else if (this.CardinalidadSemaforo == Cardinalidad.ESTE)
+                {
+                   
+                    new Animator2D(new Path2D(new Float2D(-100, Muchi.Location.Y), Muchi.Location.ToFloat2D(), 20000)).Play(Muchi, Animator2D.KnownProperties.Location);
+                  
+                    
+                   
+                }
+
+            }
+            if (Carro != null)
+            {
+                if (this.CardinalidadSemaforo == Cardinalidad.NORTE)
+                {
+
+                     
+                        new Animator2D(new Path2D(new Float2D(Carro.Location.X, 700), Carro.Location.ToFloat2D(), 1000)).Play(Carro, Animator2D.KnownProperties.Location);
+ 
+                }
+                else if (this.CardinalidadSemaforo == Cardinalidad.ESTE)
+                {
+
+                   
+                        new Animator2D(new Path2D(new Float2D(-300, Carro.Location.Y), Carro.Location.ToFloat2D(), 17000)).Play(Carro, Animator2D.KnownProperties.Location);
+
+                   
+                }
+
+            }
+        }
 
 
         public void EstablecerImagen(Bitmap _img)
@@ -64,7 +122,10 @@ namespace CircuitosProgramables_Semaforo
                 if (Conteo < 29)
                 {
                     
-                   
+                   if(Conteo == 1)
+                    {
+                        this.AnimarMuchi();
+                    }
                        
                     this.EstablecerImagen(Properties.Resources.verde);
                 }

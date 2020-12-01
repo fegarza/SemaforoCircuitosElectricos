@@ -83,6 +83,26 @@ namespace CircuitosProgramables_Semaforo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carro {
+            get {
+                object obj = ResourceManager.GetObject("carro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap carroA {
+            get {
+                object obj = ResourceManager.GetObject("carroA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap encendidos {
             get {
                 object obj = ResourceManager.GetObject("encendidos", resourceCulture);
@@ -106,6 +126,16 @@ namespace CircuitosProgramables_Semaforo.Properties {
         internal static System.Drawing.Bitmap fondoAnimado {
             get {
                 object obj = ResourceManager.GetObject("fondoAnimado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap muchiArriba {
+            get {
+                object obj = ResourceManager.GetObject("muchiArriba", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

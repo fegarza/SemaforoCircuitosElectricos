@@ -35,11 +35,4 @@ C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramabl
 C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.exe
 C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\obj\Debug\CircuitosProgramables_Semaforo.pdb
 C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\AnimSharp.dll
-C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\Nito.AsyncEx.Context.dll
-C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\Nito.AsyncEx.Tasks.dll
-C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\Nito.Disposables.dll
-C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\System.Collections.Immutable.dll
-C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\Nito.AsyncEx.Context.xml
-C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\Nito.AsyncEx.Tasks.xml
-C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\Nito.Disposables.xml
-C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\System.Collections.Immutable.xml
+C:\Users\Felipe Garza\Desktop\xd\SemaforoCircuitosElectricos\CircuitosProgramables_Semaforo\bin\Debug\WinFormAnimation.dll
